@@ -1,0 +1,36 @@
+stage: wall 
+gpus: [0]
+cache_rate: 1
+num_workers: 4
+use_amp: true
+use_ti: 1 # whether use topological loss
+
+lr: 0.0003
+batch_size: 32
+max_epochs: 300
+
+# dataset: careII
+# mri_crop_size: [448, 96, 640]
+
+dataset: COSMOS
+mri_crop_size: [320, 192, 320] # Center cropping before training 
+
+sigma: 3 # Gaussian smooth sigma
+
+in_channels: 2 
+out_channels: 3
+nsf: 32
+
+netS: unetplusplus # [unet, resunet, unetr, swinunetr]
+dropout: 0.2
+
+val_num: 5
+test_num: 15
+# training
+lr_scheduler: cosine  # [cosine, platue, none]
+init_type: normal # [normal, kaiming, xavier, orthogonal]
+init_gain: 0.02
+opt_name: adam # [adam, adamw, sgd]
+opt_args: {"weight_decay": 0.0001}
+aug_p: 0.15 # augmentation probability during training
+

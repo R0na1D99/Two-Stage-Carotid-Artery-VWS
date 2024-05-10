@@ -1,0 +1,17 @@
+imageio
+itk
+ipykernel
+ipywidgets
+matplotlib
+monai
+opencv-python
+pandas
+lightning
+scikit-image
+scikit-learn 
+SimpleITK
+wget
+timm
+tensorboard
+torch
+torchvision

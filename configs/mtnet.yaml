@@ -1,0 +1,36 @@
+stage: mtnet_sam # [mtnet_interp, mtnet_sam]
+gpus: [0]
+cache_rate: 1
+
+ct_portion: 1.0 # cta portion used for transfer learning, float between 0 to 1
+lambda_ct: 0.5
+lambda_pseudo: 0.75
+aligner_branch: 2
+
+# dataset: careII
+# mri_crop_size: [448, 96, 640]
+
+dataset: COSMOS
+mri_crop_size: [320, 192, 320] # Center cropping before training 
+
+use_amp: false # auto mixed precision
+lr: 0.0001
+max_epochs: 100
+batch_size: 1 # Will raise error since the pre-cropped images are inconsistent in shapes, if you insist plz refer to `pad_list_data_collate` in monai
+num_samples: 2
+roi_size: [96, 96, 96] 
+ct_crop_size: [320, 192, 320]
+val_num: 5
+test_num: 15
+num_workers: 4
+in_channels: 1
+out_channels: 2
+nsf: 32 # basic number of channels
+
+# init, scheduler, etc.
+lr_scheduler: none  # [cosine, platue, none]
+init_type: normal # [normal, kaiming, xavier, orthogonal]
+init_gain: 0.02
+opt_name: adam # [adam, adamw, sgd]
+opt_args: {}
+aug_p: 0.15 # augmentation probability during training
