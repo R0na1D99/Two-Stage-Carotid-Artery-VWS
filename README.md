@@ -3,7 +3,7 @@
 
 
 This is the official PyTorch implementation of the paper:\
-[Carotid Vessel Wall Segmentation Through Domain Aligner, Topological Learning, and Segment Anything for Sparse Annotation in MRI Images](https://google.com)\
+[Carotid Vessel Wall Segmentation Through Domain Aligner, Topological Learning, and Segment Anything for Sparse Annotation in MRI Images](https://ieeexplore.ieee.org/document/10589423/)\
 X. Li, X. Ouyang, J. Zhang, Z. Ding, Y. Zhang, Z. Xue, F. Shi, and D. Shen
 
 ## Installation
