@@ -92,4 +92,15 @@ This project is released under the Apache license. Please see the [LICENSE](Lice
 ### Citation
 If our work is useful for your research, please consider citing:
 ```
+@ARTICLE{10589423,
+  author={Li, Xibao and Ouyang, Xi and Zhang, Jiadong and Ding, Zhongxiang and Zhang, Yuyao and Xue, Zhong and Shi, Feng and Shen, Dinggang},
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={Carotid Vessel Wall Segmentation Through Domain Aligner, Topological Learning, and Segment Anything Model for Sparse Annotation in MR Images}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Image segmentation;Annotations;Biomedical imaging;Accuracy;Lumen;Medical diagnostic imaging;Transfer learning;Transfer Learning;Image Segmentation;Domain Adaptation;Segment Anything Model},
+  doi={10.1109/TMI.2024.3424884}
+}
 ```
